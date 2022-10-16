@@ -1,4 +1,4 @@
-import {PlayArrow, Add, ThumbUpAltOutlined, ThumbDownOutlined} from "@material-ui/icons"
+import {PlayArrow, ThumbUpAltOutlined, ThumbDownOutlined} from "@material-ui/icons"
 import { useState } from "react"
 import Slick from "../slick/Slick";
 import "./listitem.scss"
@@ -20,7 +20,6 @@ export default function ListItem({index}) {
             <div className="itemInfo">
                 <div className="icons">
                     <PlayArrow className="icon"/>
-                    <Add className="icon"/>
                     <ThumbUpAltOutlined className="icon"/>
                     <ThumbDownOutlined className="icon"/>
                 </div>

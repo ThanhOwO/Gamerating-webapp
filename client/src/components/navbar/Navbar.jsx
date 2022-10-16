@@ -4,6 +4,7 @@ import Search from "@material-ui/icons/Search"
 import Notifications from "@material-ui/icons/Notifications"
 import ArrowDropDown from "@material-ui/icons/ArrowDropDown"
 import { useState } from "react"
+import {Link} from "react-router-dom"
 
 
 const Navbar = () => {
@@ -21,11 +22,17 @@ const Navbar = () => {
         <div className="container">
             <div className="left">
                 <img src={logo} alt="" />
-                <span>Homepage</span>
-                <span>Series</span>
-                <span>Free Games</span>
+                <Link to="/" className="link">
+                    <span>Home</span>
+                </Link>
+                <Link to="/series" className="link">
+                    <span>Series</span>
+                </Link>
+                <Link to="/games" className="link">
+                    <span>Games</span>
+                </Link>
                 <span>New Upcoming</span>
-                <span>My list</span>
+                <span>Daily New</span>
             </div>
             <div className="right">
                 <Search className="icon"/>
