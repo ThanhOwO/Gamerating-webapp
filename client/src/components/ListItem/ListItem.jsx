@@ -17,11 +17,11 @@ export default function ListItem({index}) {
             <>
             <iframe src="https://www.youtube.com/embed/iqysmS4lxwQ?autoplay=1&mute=1"></iframe>
             <div className="itemInfo">
-                <div className="icon">
-                    <PlayArrow/>
-                    <Add/>
-                    <ThumbUpAltOutlined/>
-                    <ThumbDownOutlined/>
+                <div className="icons">
+                    <PlayArrow className="icon"/>
+                    <Add className="icon"/>
+                    <ThumbUpAltOutlined className="icon"/>
+                    <ThumbDownOutlined className="icon"/>
                 </div>
                 <div className="itemInfoTop">
                     <span className="limit">16+</span>
@@ -30,9 +30,11 @@ export default function ListItem({index}) {
                 <div className="desc">
                     Ghost of Tsushima is an action-adventure game developed by Sucker Punch Productions and published by Sony Interactive Entertainment.
                 </div>
-                <div className="genre">Action</div>
-                <div className="genre">Adventure</div>
-                <div className="genre">Role-playing</div>
+                <div className="genre">
+                    <span className="br"> Action </span>
+                    <span className="br"> Adventure </span>
+                    <span className="br"> Role-playing </span>
+                </div>
             </div>
             </>
         )}
