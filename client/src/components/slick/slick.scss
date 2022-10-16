@@ -1,0 +1,25 @@
+.slick{
+    
+    .arrow{
+        position: absolute;
+        z-index: 99;
+        height: 100%;
+        width: 30px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        &:hover{
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        &.left{
+            left: 0;
+        }
+
+        &.right{
+            right: 0;
+        }
+    }
+}
+
+

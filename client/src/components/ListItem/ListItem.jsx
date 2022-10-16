@@ -1,5 +1,6 @@
 import {PlayArrow, Add, ThumbUpAltOutlined, ThumbDownOutlined} from "@material-ui/icons"
 import { useState } from "react"
+import Slick from "../slick/Slick";
 import "./listitem.scss"
 
 export default function ListItem({index}) {
@@ -15,7 +16,7 @@ export default function ListItem({index}) {
         <img src="https://cdn.tgdd.vn//GameApp/-1//ghost-of-tsushima-800x450.jpg" alt="" />
         {isHovered && (
             <>
-            <iframe src="https://www.youtube.com/embed/iqysmS4lxwQ?autoplay=1&mute=1"></iframe>
+            <Slick className="slick"/>
             <div className="itemInfo">
                 <div className="icons">
                     <PlayArrow className="icon"/>

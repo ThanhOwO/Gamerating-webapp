@@ -23,7 +23,8 @@ const Navbar = () => {
                 <img src={logo} alt="" />
                 <span>Homepage</span>
                 <span>Series</span>
-                <span>Games</span>
+                <span>Free Games</span>
+                <span>New Upcoming</span>
                 <span>My list</span>
             </div>
             <div className="right">
