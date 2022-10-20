@@ -16,6 +16,6 @@ genre: game genre
 list
 
 title: list title ex: free games, game of the year, ...
-type: on navbar ex: series, games, new upcoming,...
+type: on navbar ex: series, games
 genre: game genre
 content: array include all game card id

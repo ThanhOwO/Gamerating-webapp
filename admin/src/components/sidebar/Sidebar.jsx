@@ -4,7 +4,7 @@ import {
   Timeline,
   TrendingUp,
   PermIdentity,
-  Storefront,
+  SportsEsports,
   AttachMoney,
   BarChart,
   MailOutline,
@@ -47,10 +47,10 @@ export default function Sidebar() {
                 Users
               </li>
             </Link>
-            <Link to="/products" className="link">
+            <Link to="/games" className="link">
               <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Products
+                <SportsEsports className="sidebarIcon" />
+                Games
               </li>
             </Link>
             <li className="sidebarListItem">
