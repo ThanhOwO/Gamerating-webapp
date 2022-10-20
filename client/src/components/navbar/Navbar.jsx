@@ -31,8 +31,8 @@ const Navbar = () => {
                 <Link to="/games" className="link">
                     <span>Games</span>
                 </Link>
-                <span>New Upcoming</span>
-                <span>Daily New</span>
+                    <span>Daily New</span>
+
             </div>
             <div className="right">
                 <Search className="icon"/>

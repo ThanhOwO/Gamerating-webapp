@@ -20,6 +20,28 @@
         position: absolute;
         top: 0;
         left: 0;
+        
+        .arrow{
+            position: absolute;
+            z-index: 99;
+            height: 100%;
+            width: 30px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(0,0,0,0.5);
+            }
+    
+            &.left{
+                left: 0;
+            }
+    
+            &.right{
+                right: 0;
+            }
+        }
     }
 
     &:hover{
@@ -51,6 +73,10 @@
                 border-radius: 50%;
                 margin-right: 5px;
                 font-size: 16px;
+                color: white;
+            }
+            .icon:hover{
+                color: rgb(243, 56, 140);
             }
         }
 

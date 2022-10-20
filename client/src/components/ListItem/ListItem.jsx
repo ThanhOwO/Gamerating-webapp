@@ -2,8 +2,12 @@ import {PlayArrow, ThumbUpAltOutlined, ThumbDownOutlined} from "@material-ui/ico
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
-import Slick from "../slick/Slick";
 import "./listitem.scss"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick"
+import ArrowBackIosOutlined from "@material-ui/icons/ArrowBackIosOutlined"
+import ArrowForwardIosOutlined from "@material-ui/icons/ArrowForwardIosOutlined"
 
 export default function ListItem({index, item}) {
 
@@ -19,7 +23,6 @@ export default function ListItem({index, item}) {
                         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGI5Y2Y1NmRhMmNjMTUzOGU0NDIyZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2NTkzMDM1MCwiZXhwIjoxNjY2MzYyMzUwfQ.R2QKUlPhrJdGHefyaHU_87yZt9YscFbkAHxa9EJ9ruY' 
                       }
                 })
-                console.log(res)
                 setGame(res.data)
             } catch (error) {
                 console.log(error)
@@ -28,22 +31,58 @@ export default function ListItem({index, item}) {
         getGames()
     },[item])
 
+    const ArrowLeft = (props) => (
+    
+        <ArrowBackIosOutlined {...props}
+        className={'arrow left'}/>
+         
+        );
+      const ArrowRight = (props) => (
+        <ArrowForwardIosOutlined {...props}
+        className={'arrow right'}/>  
+        );
+    
+      const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: <ArrowLeft />,
+        nextArrow: <ArrowRight />,
+      };
+
   return (
+    
     <div className="listItem" 
         style={{left: isHovered && index * 225 - 50 + index * 2.5 }}
         onMouseEnter={() => setIsHovered(true)} 
         onMouseLeave={() => setIsHovered(false)}
     >
-        <img src={game.img} alt="" />
+        <img src={game.imgSm} alt="" />
         {isHovered && (
             <>
-            <Slick className="slick"/>
+            <div className='slick'>
+                <Slider {...settings}>
+                
+                    <div>
+                        <img src={game.trailer}/>
+                    </div>
+                    <div>
+                        <img src={game.trailer2} />
+                    </div>
+                    <div>
+                        <img src={game.trailer3} />
+                    </div>
+                    <div>
+                        <img src={game.trailer4} />
+                    </div>
+                </Slider>
+            </div>
             <div className="itemInfo">
                 <div className="icons">
                     <Link to={'/watch'} state={{gm: game.video}}>
                         <PlayArrow className="icon" />
                     </Link>
-                            
                     <ThumbUpAltOutlined className="icon"/>
                     <ThumbDownOutlined className="icon"/>
                 </div>
