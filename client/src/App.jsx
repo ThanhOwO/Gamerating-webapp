@@ -8,8 +8,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Navigate
+  Route
 } from "react-router-dom";
 
 
@@ -21,12 +20,12 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      <Route element={<PrivateRoute/>}>
-      </Route>
         <Route exact path="/" element={ <Home />} />
         <Route path="/series" element={<Home type="series"/>} />
         <Route path="/games" element={<Home type="games"/>} />
         <Route path="/watch" element={<Watch />} />
+      <Route element={<PrivateRoute/>}>
+      </Route>
 
     </Routes>
   </BrowserRouter>

@@ -1,0 +1,21 @@
+game card
+
+title: title of game
+desc: write description about game
+img: game background img
+imgTitle: game logo img
+imgSm: small game card background
+trailer: img gameplay of game
+video: game video trailer
+year: year of manufacture
+limit: age limit
+genre: game genre
+
+
+
+list
+
+title: list title ex: free games, game of the year, ...
+type: on navbar ex: series, games, new upcoming,...
+genre: game genre
+content: array include all game card id

@@ -1,9 +1,27 @@
 import "./featured.scss"
-import BG from "../../assets/landing.jpg"
 import PlayArrow from "@material-ui/icons/PlayArrow"
 import InfoOutlined from "@material-ui/icons/InfoOutlined"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 export default function Featured({type}) {
+    const [content, setContent] = useState({})
+    useEffect(() => {
+        const getRandomContent = async () => {
+            try {
+                const res = await axios.get(`/games/random?type=${type}`, {
+                    headers:{
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGI5Y2Y1NmRhMmNjMTUzOGU0NDIyZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2NTkzMDM1MCwiZXhwIjoxNjY2MzYyMzUwfQ.R2QKUlPhrJdGHefyaHU_87yZt9YscFbkAHxa9EJ9ruY' 
+                      }})
+                setContent(res.data[0])
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        getRandomContent()
+    },[type])
+
   return (
     <div className="featured">
         {type && (
@@ -20,11 +38,11 @@ export default function Featured({type}) {
                 </select>
             </div>
         )}
-        <img src={BG} alt="" width="100%" />
+        <img src={content.img} alt="" width="100%" />
         <div className="info">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Ghost_of_Tsushima_logo_black.svg/1280px-Ghost_of_Tsushima_logo_black.svg.png" alt="" />
+            <img src={content.imgTitle} alt="" />
             <span className="desc">
-            Ghost of Tsushima is a stealthy, third-person action-adventure game. With a huge open world, there are no stops and can be explored without a guide. The player can quickly travel to different areas of the world on horseback and with an item that acts as a hook to access hard-to-reach areas of the game. The game features side quests and non-playable characters (NPCs) that the player can interact with.
+                {content.desc}
             </span>
             <div className="buttons">
                 <button className="play">
