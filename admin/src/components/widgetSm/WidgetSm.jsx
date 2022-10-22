@@ -10,9 +10,10 @@ export default function WidgetSm() {
   useEffect(()=> {
     const getNewUsers = async () => {
       try {
-          const res = await axios.get("/users?new=true", {headers:{
-            "Authorization": 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGI5Y2Y1NmRhMmNjMTUzOGU0NDIyZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2NjI3OTI2MiwiZXhwIjoxNjY2NzExMjYyfQ.mk2KUPzW-zdMlIYHFtTtlzWyfW34KvD-8ZHgSWXe-BE'
-          }
+          const res = await axios.get("/users?new=true", {
+            headers:{
+              'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
+            }
         });
         setNewUsers(res.data)
       } catch (error) {

@@ -26,4 +26,4 @@ app.use("/api/lists", listRoute)
 
 app.listen(8800, () => {
     console.log("Backend server is running!")
-})
+}) 
