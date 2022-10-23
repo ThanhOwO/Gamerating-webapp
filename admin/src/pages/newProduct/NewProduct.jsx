@@ -77,21 +77,20 @@ export default function NewProduct() {
           <input type="text" placeholder="Ex: 16+" name="limit" onChange={handleChange} required/>
         </div>
         <div className="addProductItem">
-          <label>Game genre 1</label>
+          <label>Game genre (main)</label>
           <input type="text" placeholder="Game genre" name="genre" onChange={handleChange} required/>
         </div>
         <div className="addProductItem">
-          <label>Game genre 2</label>
+          <label>Game genre 2 (option)</label>
           <input type="text" placeholder="Game genre" name="genre2" onChange={handleChange} />
         </div>
         <div className="addProductItem">
-          <label>Game genre 3</label>
+          <label>Game genre 3 (option)</label>
           <input type="text" placeholder="Game genre" name="genre3" onChange={handleChange} />
         </div>
         <div className="addProductItem">
           <label>Is Series?</label>
           <select name="active" id="isSeries">
-            <option value="true">Yes</option>
             <option value="false">No</option>
           </select>
         </div>

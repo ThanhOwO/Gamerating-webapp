@@ -29,7 +29,7 @@ router.put("/:id", verify, async(req, res) => {
     }else{
         res.status(403).json("You can update only your account!")
     }
-})
+}) 
   
 //Delete ---------------------------------------------------------------------------------------------------------
 router.delete("/:id", verify, async(req, res) => {

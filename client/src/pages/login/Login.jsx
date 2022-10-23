@@ -1,6 +1,6 @@
 import "./login.scss"
 import logo from "../../assets/GSCornerlogo.png"
-
+import { Link } from "react-router-dom"
 
 export default function Login() {
   return (
@@ -17,7 +17,11 @@ export default function Login() {
                 <input type="email" placeholder="Email or Username"/>
                 <input type="password" placeholder="Password"/>
                 <button className="loginButton">Sign In</button>
-                <span>Are you new here ? <b>Sign up now.</b></span>
+                <span>Are you new here ?
+                <Link className="link" to="/register">
+                  <b>Sign up now.</b>
+                </Link>
+                 </span>
             </form>
         </div>
 

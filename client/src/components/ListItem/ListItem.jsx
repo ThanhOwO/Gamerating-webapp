@@ -20,7 +20,7 @@ export default function ListItem({index, item}) {
             try {
                 const res = await axios.get("games/find/" + item , {
                     headers:{
-                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNGI5Y2Y1NmRhMmNjMTUzOGU0NDIyZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2NjM2ODM3NCwiZXhwIjoxNjY2ODAwMzc0fQ.wugOd6Jm5Wt59p-P_pQv-pPxTn-426g_USjs5Iq84hM' 
+                        'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken 
                       }
                 })
                 setGame(res.data)

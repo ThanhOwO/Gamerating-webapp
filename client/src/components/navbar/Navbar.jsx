@@ -25,9 +25,6 @@ const Navbar = () => {
                 <Link to="/" className="link">
                     <span>Home</span>
                 </Link>
-                <Link to="/series" className="link">
-                    <span>Series</span>
-                </Link>
                 <Link to="/games" className="link">
                     <span>Games</span>
                 </Link>

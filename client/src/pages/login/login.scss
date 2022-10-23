@@ -40,6 +40,10 @@
             flex-direction: column;
             justify-content: space-around;
 
+            h1{
+                text-shadow: 2px 2px 2px rgb(242, 30, 157)
+            }
+
             input{
                 height: 40px;
                 border-radius: 10px;
@@ -66,6 +70,15 @@
 
             span{
                 color: lightgray;
+            }
+
+            .link{
+
+                margin-left: 10px;
+
+                &:hover{
+                    color: rgb(243, 56, 140);
+                }
             }
         }
 

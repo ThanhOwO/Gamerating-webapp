@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const List = require("../models/List")
-const verify = require("../middleware/verifyToken");
+const verifyToken = require("../middleware/verifyToken");
 
 //Create ---------------------------------------------------------------------------------------------------------
 
-router.post("/", verify, async(req, res) => {
+router.post("/", verifyToken, async(req, res) => {
     if(req.user.isAdmin){
         const newList = new List(req.body)
 
@@ -21,7 +21,7 @@ router.post("/", verify, async(req, res) => {
 
 //Delete ---------------------------------------------------------------------------------------------------------
 
-router.delete("/:id", verify, async(req, res) => {
+router.delete("/:id", verifyToken, async(req, res) => {
     if(req.user.isAdmin){
         try {
             await List.findByIdAndDelete(req.params.id)
@@ -35,7 +35,7 @@ router.delete("/:id", verify, async(req, res) => {
 })
 
 //Get ---------------------------------------------------------------------------------------------------------
-router.get("/", verify, async (req, res) => {
+router.get("/", verifyToken, async (req, res) => {
     const typeQuery = req.query.type;
     const genreQuery = req.query.genre;
     let list = [];
