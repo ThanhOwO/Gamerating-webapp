@@ -32,7 +32,7 @@ export default function Register() {
             return
       }
       try {
-        const res = await axios.post(`auth/register`, registerForm) 
+        await axios.post(`auth/register`, registerForm) 
         navigate('/login')
       } catch (error) {
         setAlert({type: 'danger', message: 'Username or email already registered'})

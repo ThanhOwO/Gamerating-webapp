@@ -8,7 +8,7 @@ const userRoute = require("./routes/users")
 const gameRoute = require("./routes/games")
 const listRoute = require("./routes/list")
 
-dotenv.config()
+dotenv.config()                  
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
