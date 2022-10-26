@@ -1,5 +1,6 @@
 import axios from "axios"
-import { getGameStart, getGameSuccess, getGameFailure, deleteGameStart, deleteGameSuccess, deleteGameFailure, createGameStart, createGameSuccess, createGameFailure, updateGameStart, updateGameSuccess } from "./GameAction"
+import { getGameStart, getGameSuccess, getGameFailure, deleteGameStart, deleteGameSuccess, deleteGameFailure, createGameStart, createGameSuccess, createGameFailure, updateGameStart, updateGameSuccess, updateGameFailure } from "./GameAction"
+
 
 // Get game
 export const getGames = async (dispatch) => {
@@ -31,18 +32,18 @@ export const createGames = async (game, dispatch) => {
 }
 
 //Update game
-/* export const updateGames = async (id, dispatch) => {
+export const updateGames = async (game, dispatch) => {
     dispatch(updateGameStart())
     try {
-            await axios.put("games/"+ id, {
+            await axios.put("games/" , game , {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
-        dispatch(updateGameSuccess(id))
+        dispatch(updateGameSuccess(game))
     } catch (error) {
-        dispatch(createGameFailure())
+        dispatch(updateGameFailure())
     }
-} */
+}
 
 //Delete game
 export const deleteGames = async (id, dispatch) => {

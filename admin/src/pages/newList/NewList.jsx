@@ -37,7 +37,7 @@ export default function NewList() {
 
 
   return (
-    <div className="newProduct">
+    <div className="newProduct" onSubmit={handleSubmit}>
       <h1 className="addProductTitle">New List</h1>
       <form className="addProductForm">
       <div className="formLeft">
@@ -67,7 +67,7 @@ export default function NewList() {
           </select>
         </div>
         </div>
-        <button className="addProductButton" onClick={{handleSubmit}} >Create</button>
+        <button className="addProductButton">Create</button>
       </form>
     </div>
   );

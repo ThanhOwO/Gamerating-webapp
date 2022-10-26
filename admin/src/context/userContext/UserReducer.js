@@ -1,75 +1,75 @@
-const GameReducer = (state, action) => {
+const UserReducer = (state, action) => {
     switch (action.type){
-        case "GAME_START":
+        case "USER_START":
             return{
-                games: [],
+                users: [],
                 isFetching: true,
                 error: false,
             };
-        case "GAME_SUCCESS":
+        case "USER_SUCCESS":
             return{
-                games: action.payload,
+                users: action.payload,
                 isFetching: false,
                 error: false,
             }
-        case "GAME_FAILURE":
+        case "USER_FAILURE":
             return{
-                games: [],
+                users: [],
                 isFetching: false,
                 error: true,
             }
 
-        case "CREATE_GAME_START":
+        case "CREATE_USER_START":
             return{
                 ...state,
                 isFetching: true,
                 error: false,
             }
-        case "CREATE_GAME_SUCCESS":
+        case "CREATE_USER_SUCCESS":
             return{
-                games: [...state.games, action.payload],
+                users: [...state.users, action.payload],
                 isFetching: false,
                 error: false,
             }
-        case "CREATE_GAME_FAILURE":
-            return{
-                ...state,
-                isFetching: false,
-                error: true,
-            };
-
-        case "EDIT_GAME_START":
-            return{
-                ...state,
-                isFetching: true,
-                error: false,
-            }
-        case "EDIT_GAME_SUCCESS":
-            return{
-                games: state.games.map((game) => game._id === action.payload._id && action.payload),
-                isFetching: false,
-                error: false,
-            }
-        case "EDIT_GAME_FAILURE":
+        case "CREATE_USER_FAILURE":
             return{
                 ...state,
                 isFetching: false,
                 error: true,
             };
 
-        case "DELETE_GAME_START":
+        case "EDIT_USER_START":
+            return{
+                ...state,
+                isFetching: true,
+                error: false,
+            }
+        case "EDIT_USER_SUCCESS":
+            return{
+                users: state.users.map((user) => user._id === action.payload._id && action.payload),
+                isFetching: false,
+                error: false,
+            }
+        case "EDIT_USER_FAILURE":
+            return{
+                ...state,
+                isFetching: false,
+                error: true,
+            };
+
+        case "DELETE_USER_START":
             return{
                 ...state,
                 isFetching: true,
                 error: false,
             };
-        case "DELETE_GAME_SUCCESS":
+        case "DELETE_USER_SUCCESS":
             return{
-                games: state.games.filter((movie)=> movie._id !== action.payload),
+                users: state.users.filter((user)=> user._id !== action.payload),
                 isFetching: false,
                 error: false,
             }
-        case "DELETE_GAME_FAILURE":
+        case "DELETE_USER_FAILURE":
             return{
                 ...state,
                 isFetching: false,
@@ -80,4 +80,4 @@ const GameReducer = (state, action) => {
     }
 }
 
-export default GameReducer
+export default UserReducer

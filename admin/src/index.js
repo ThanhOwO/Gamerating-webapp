@@ -4,6 +4,7 @@ import App from './App';
 import {AuthContextProvider} from "./context/authContext/AuthContext"
 import { GameContextProvider } from './context/GameContext/GameContext';
 import { ListContextProvider } from './context/listContext/ListContext';
+import { UserContextProvider } from './context/userContext/UserContext';
 
 
 ReactDOM.render(
@@ -11,7 +12,9 @@ ReactDOM.render(
     <AuthContextProvider>
       <GameContextProvider>
         <ListContextProvider>
-          <App />
+          <UserContextProvider>
+            <App />
+          </UserContextProvider>
         </ListContextProvider>
       </GameContextProvider>
     </AuthContextProvider>

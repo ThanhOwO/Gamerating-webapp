@@ -1,5 +1,5 @@
 import "./widgetSm.css";
-import { Visibility } from "@material-ui/icons";
+import { Create } from "@material-ui/icons";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios"
@@ -38,10 +38,10 @@ export default function WidgetSm() {
             <div className="widgetSmUser">
               <span className="widgetSmUsername">{user.username}</span>
             </div>
-            <button className="widgetSmButton">
-              <Visibility className="widgetSmIcon" />
-              Display
-            </button>
+            <div className="widgetSmButton">
+              <Create className="widgetSmIcon" />
+              {user.createdAt}
+            </div>
           </li>
         ))}
       </ul>

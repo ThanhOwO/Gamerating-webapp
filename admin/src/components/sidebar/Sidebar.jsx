@@ -1,17 +1,10 @@
 import "./sidebar.css";
 import {
   LineStyle,
-  Timeline,
-  TrendingUp,
   PermIdentity,
   SportsEsports,
   List,
-  BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
-  WorkOutline,
-  Report,
+
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 

@@ -23,7 +23,7 @@ export const createGameFailure = () => ({
 })
 
 // Update game -----------------------------------------
-/* export const updateGameStart = () => ({
+export const updateGameStart = () => ({
     type: "EDIT_GAME_START",
 })
 export const updateGameSuccess = (game) => ({
@@ -33,7 +33,7 @@ export const updateGameSuccess = (game) => ({
 export const updateGameFailure = () => ({
     type: "EDIT_GAME_FAILURE", 
 })
- */
+
 
 // Delete game -----------------------------------------
 export const deleteGameStart = () => ({

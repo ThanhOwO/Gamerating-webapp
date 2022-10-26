@@ -17,15 +17,13 @@ export default function NewProduct() {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     createGames(game, dispatch)
     history.push("/games")
   }
 
-
-
   return (
-    <div className="newProduct">
+    <div className="newProduct" onSubmit={handleSubmit}>
       <h1 className="addProductTitle">New Game</h1>
       <form className="addProductForm">
       <div className="addProductItem">
@@ -94,7 +92,7 @@ export default function NewProduct() {
             <option value="false">No</option>
           </select>
         </div>
-        <button className="addProductButton" onClick={{handleSubmit}} >Create</button>
+        <button className="addProductButton" >Create</button>
       </form>
     </div>
   );
