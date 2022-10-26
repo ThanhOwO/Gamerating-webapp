@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
             <div className="right">
                 <Search className="icon"/>
-                <span>{user.username}</span>
+                <span> Welcome {user.username}</span>
                 <img src={user.profilePic} alt=""/>
                 <div className="profile">
                     <ArrowDropDown className="icon"/>
