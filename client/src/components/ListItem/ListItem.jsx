@@ -9,6 +9,7 @@ import Slider from "react-slick"
 import ArrowBackIosOutlined from "@material-ui/icons/ArrowBackIosOutlined"
 import ArrowForwardIosOutlined from "@material-ui/icons/ArrowForwardIosOutlined"
 
+
 export default function ListItem({index, item}) {
 
     const [isHovered, setIsHovered] = useState(false);

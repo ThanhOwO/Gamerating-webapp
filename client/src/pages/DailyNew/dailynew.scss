@@ -1,0 +1,19 @@
+.landing {
+	position: relative;
+	background: url('../../assets/landing.jpg') no-repeat center center/cover;
+	height: 100vh;
+	
+}
+
+.dark-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	overflow: scroll;
+}
+
+.container.BodyContainer {
+    background: none;
+    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}

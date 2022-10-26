@@ -1,7 +1,6 @@
 import "./navbar.scss"
 import logo from "../../assets/GSCornerlogo.png"
 import Search from "@material-ui/icons/Search"
-import Notifications from "@material-ui/icons/Notifications"
 import ArrowDropDown from "@material-ui/icons/ArrowDropDown"
 import { useContext, useState } from "react"
 import {Link} from "react-router-dom"
@@ -11,7 +10,7 @@ import { logoutStart } from "../../authContext/AuthAction"
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false)
-    const {dispatch} = useContext(AuthContext)
+    const {user, dispatch} = useContext(AuthContext)
 
     window.onscroll = () => {
         setIsScrolled(window.pageYOffset === 0 ? false : true);
@@ -24,21 +23,24 @@ const Navbar = () => {
     <div className={isScrolled ? "navbar scrolled" : "navbar"}>
         <div className="container">
             <div className="left">
-                <img src={logo} alt="" />
                 <Link to="/" className="link">
-                    <span>Home</span>
+                    <img src={logo} alt="" />
+                </Link>
+                <Link to="/" className="link">
+                    <span className="navbarmainLinks">Home</span>
                 </Link>
                 <Link to="/games" className="link">
-                    <span>Games</span>
+                    <span className="navbarmainLinks">Games</span>
                 </Link>
+                <Link to="/dailynew" className="link">
                     <span>Daily New</span>
+                </Link>
 
             </div>
             <div className="right">
                 <Search className="icon"/>
-                <span>KID</span>
-                <Notifications className="icon"/>
-                <img src="https://thientu.vn/userfiles/images/meo-ollie.jpg" alt=""/>
+                <span>{user.username}</span>
+                <img src={user.profilePic} alt=""/>
                 <div className="profile">
                     <ArrowDropDown className="icon"/>
                     <div className="options">

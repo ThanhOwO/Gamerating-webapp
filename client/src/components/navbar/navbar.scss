@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .navbar{
     width: 100%;
     color: white;
@@ -21,13 +23,27 @@
         .left{
             display: flex;
             align-items: center;
+            
             img{
                 height: 40px;
                 margin-right: 40px;
+
             }
 
             span{
                 margin-right: 20px;
+                cursor: pointer;
+
+               
+
+                .navbarmainLinks{
+                    @include tablet {
+                        display: block;
+                    }
+                }
+            }
+
+            .link{
                 cursor: pointer;
             }
         }
@@ -47,6 +63,7 @@
                 border-radius: 50%;
                 object-fit: cover;
                 cursor: pointer;
+                margin-left: 5px;
             }
 
             .profile{
