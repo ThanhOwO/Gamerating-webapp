@@ -43,10 +43,12 @@ const loginUser = async event => {
             <img className="logo" src={logo} alt="" />
             </div>
         </div>
+        
         <div className="container">
+        <AlertMessage className='alert' info={alert} />
             <form>
                 <h1>Sign In</h1>
-                <AlertMessage className='alert' info={alert} />
+                
                 <input type="email" 
                         placeholder="Email"
                         name='email' 

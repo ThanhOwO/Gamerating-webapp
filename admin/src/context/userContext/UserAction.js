@@ -26,9 +26,9 @@ export const createUserFailure = () => ({
 export const updateUserStart = () => ({
     type: "EDIT_USER_START",
 })
-export const updateUserSuccess = (game) => ({
+export const updateUserSuccess = (user) => ({
     type: "EDIT_USER_SUCCESS",
-    payload: game,
+    payload: user,
 })
 export const updateUserFailure = () => ({
     type: "EDIT_USER_FAILURE", 

@@ -35,7 +35,7 @@ export default function Featured({type, setgenre}) {
                     <option value="horror">Horror</option>
                     <option value="adventure">Adventure</option>
                     <option value="role-playing">Role-playing</option>
-                    <option value="simulation">Simulation</option>
+                    <option value="sport">Sports-games</option>
                     <option value="strategy">Strategy</option>
                     <option value="online">Online</option>
                 </select>

@@ -32,17 +32,17 @@ export const createGames = async (game, dispatch) => {
 }
 
 //Update game
-export const updateGames = async (game, dispatch) => {
+export const updateGames = (_id) => {return async (game, dispatch) => {
     dispatch(updateGameStart())
     try {
-            await axios.put("games/" , game , {
+            await axios.put("games/${_id}" , game , {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
         dispatch(updateGameSuccess(game))
     } catch (error) {
         dispatch(updateGameFailure())
-    }
+    }}  
 }
 
 //Delete game

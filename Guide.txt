@@ -19,3 +19,90 @@ title: list title ex: free games, game of the year, ...
 type: on navbar ex: series, games
 genre: game genre
 content: array include all game card id
+
+list of game:
+Action: 
+1. Ghost of Tsushima
+2. Red Dead Redemption 2
+3. Elden Ring
+4. Sekiro                                     <-------------Continue
+5. Call of Duty: Modern Warfare II 
+6. Monster Hunter Rise
+7. DyingLight 2
+8. Ghostwire Tokyo
+9. Doom Eternal
+10. Lost Judgment
+
+Horror:
+1. Scorn
+2. RE 8
+3. Alien: Isolation
+4. Outlast 2
+5. Dead space remake (upcoming)
+6. Little nightmare 2
+7. The Quarry
+8. RE 4 remake (upcoming)
+9. Silent Hill f (upcoming)
+10. THE CALLISTO PROTOCOL (upcoming)
+
+Adventure:
+1. God of War
+2. God of War Ragnarok (upcoming)
+3. Marvel’s Spider-Man Remastered
+4. Stray
+5. Horizon Forbidden West
+6. Spider-man remastered
+7. Kena Bridge of Spirit
+8. Far cry 6
+9. Life is strange: true colors
+10. Cult of the Lamb
+
+Role-playing:
+1. Mount & blade 2: bannerlord
+2. Elden Ring
+3. The last of us 2
+4. Biomutant
+5. Dark Soul 3
+6. Final Fantasy 7 remake
+7. Nier: Automata
+8. The last of us remake
+9. Monster hunter rise
+10. Cyberpunk 2077
+
+Sport-game:
+1. WWE 2k22
+2. FIFA 23
+3. NBA 2K23
+4. SBK 22
+5. PGA Tour 2K23
+6. Call of the Wild: The Angler
+7. Cricket 22
+8. Football manager 22
+9. F1 2022
+10. Assetto Corsa Competizione
+
+Strategy:
+1. Victoria 3
+2. Total War: warhammer 3
+3. Persona 5 Royal
+4. Stellaris
+5. Across the obelisk
+6. Incryption
+7. Age of Empires IV
+8. Evil Genius 2
+9. HighFleet
+10. Star craft 2
+
+
+Online:
+1. PUBG
+2. Apex Legends
+3. Overwatch 2
+4. Valorant
+5. Fortnite
+6. CSGO
+7. LOL
+8. Call of Duty: Warzone
+9. Dota 2
+10. Minecraft
+

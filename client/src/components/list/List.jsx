@@ -20,7 +20,7 @@ export default function List({list}) {
             setSliderNumber(slideNumber - 1)
             listRef.current.style.transform = `translateX(${230 + distance}px)`
         }
-        if(direction === "right" && slideNumber < 12 - clicklimit){
+        if(direction === "right" && slideNumber < 10 - clicklimit){
             setSliderNumber(slideNumber + 1)
             listRef.current.style.transform = `translateX(${-230 + distance}px)`
         }

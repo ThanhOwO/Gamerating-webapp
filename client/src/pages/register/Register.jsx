@@ -30,7 +30,7 @@ export default function Register() {
             setAlert({type: 'danger', message: 'Password does not match'})
             setTimeout(() => setAlert(null), 5000)
             return
-      }
+      } 
       try {
         await axios.post(`auth/register`, registerForm) 
         navigate('/login')

@@ -32,17 +32,18 @@ export const createUsers = async (user, dispatch) => {
 }
 
 //Update user
-export const updateUsers = async (game, dispatch) => {
+export const updateUsers = (_id) => {return async (user, dispatch) => {
     dispatch(updateUserStart())
     try {
-            const res = await axios.put("users/", game, {
+            await axios.put("users/${_id}", user, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
-        dispatch(updateUserSuccess(res.game))
+        dispatch(updateUserSuccess({_id, user}))
     } catch (error) {
         dispatch(updateUserFailure())
     }
+    } 
 }
 
 //Delete user

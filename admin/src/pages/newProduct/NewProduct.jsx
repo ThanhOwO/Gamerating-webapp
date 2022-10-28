@@ -40,7 +40,7 @@ export default function NewProduct() {
         </div>
         <div className="addProductItem">
           <label>Game Logo Image</label>
-          <input type="text" placeholder="Add image url here" name="imgLogo" onChange={handleChange} required/>
+          <input type="text" placeholder="Add image url here" name="imgTitle" onChange={handleChange} required/>
         </div>
         <div className="addProductItem">
           <label>Game Card Image</label>

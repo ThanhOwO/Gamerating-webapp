@@ -50,6 +50,9 @@ export default function ListItem({index, item}) {
         slidesToScroll: 1,
         prevArrow: <ArrowLeft />,
         nextArrow: <ArrowRight />,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        cssEase: "linear"
       };
 
   return (
