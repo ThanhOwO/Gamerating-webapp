@@ -24,6 +24,12 @@ app.use("/api/users", userRoute)
 app.use("/api/games", gameRoute)
 app.use("/api/lists", listRoute)
 
-app.listen(8800, () => {
+app.get('/', (req, res) => {
+    res.send('BACKEND IS RUNNING')
+  })
+
+const PORT = process.env.PORT || 8800
+
+app.listen(PORT, () => {
     console.log("Backend server is running!")
 }) 
