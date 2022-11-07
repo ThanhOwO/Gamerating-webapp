@@ -4,7 +4,7 @@ import Featured from "../../components/featured/Featured"
 import List from "../../components/list/List"
 import { useEffect, useState } from "react"
 import axios from "axios"
-
+import { apiUrl } from "../../authContext/constant"
 
 
 const Home = ({type}) => {
@@ -14,7 +14,7 @@ const Home = ({type}) => {
   useEffect(() => {
     const getRandomLists = async () => {
       try {
-        const res = await axios.get(`lists?${type ? "?type=" + type : ""}${genre ? "$genre=" + genre : "" }`, {
+        const res = await axios.get(`${apiUrl}/lists?${type ? "?type=" + type : ""}${genre ? "$genre=" + genre : "" }`, {
           headers:{
             'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
           }

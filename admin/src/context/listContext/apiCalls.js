@@ -1,11 +1,13 @@
 import axios from "axios"
 import { getListStart, getListSuccess, getListFailure, deleteListStart, deleteListSuccess, deleteListFailure, createListStart, createListSuccess, createListFailure } from "./ListAction"
+import { apiUrl } from "../Constants/constants"
+
 
 // Get list
 export const getLists = async (dispatch) => {
     dispatch(getListStart())
     try {
-        const res = await axios.get("lists/", {
+        const res = await axios.get(`${apiUrl}/lists/`, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
@@ -30,19 +32,6 @@ export const createList = async (list, dispatch) => {
     }
 }
 
-//Update list
-/* export const updateGames = async (id, dispatch) => {
-    dispatch(updateGameStart())
-    try {
-            await axios.put("games/"+ id, {
-            headers:{
-              'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
-            }})
-        dispatch(updateGameSuccess(id))
-    } catch (error) {
-        dispatch(createGameFailure())
-    }
-} */
 
 //Delete game
 export const deleteList = async (id, dispatch) => {

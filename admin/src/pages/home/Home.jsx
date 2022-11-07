@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { useMemo } from "react";
+import { apiUrl } from "../../context/Constants/constants";
 
 export default function Home() {
   const MONTHS = useMemo(() => [
@@ -30,7 +31,7 @@ export default function Home() {
     const getStats = async () => {
       try {
         
-        const res = await axios.get("/users/stats", {
+        const res = await axios.get(`${apiUrl}/users/stats`, {
           headers:{
             "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
           }

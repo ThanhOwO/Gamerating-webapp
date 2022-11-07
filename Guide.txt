@@ -16,14 +16,7 @@ Add new function:
   + user setting page
   + evaluate page for game
   + like and dislike function
-- Admin
-  + Daily new CRUD page
 
-Fix function:
-- Admin:
-  + Update user
-  + Update game
-  + Update list
 
 
 list

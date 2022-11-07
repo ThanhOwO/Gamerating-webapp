@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick"
 import ArrowBackIosOutlined from "@material-ui/icons/ArrowBackIosOutlined"
 import ArrowForwardIosOutlined from "@material-ui/icons/ArrowForwardIosOutlined"
+import { apiUrl } from "../../authContext/constant";
 
 
 export default function ListItem({index, item}) {
@@ -19,7 +20,7 @@ export default function ListItem({index, item}) {
     useEffect(() => {
         const getGames = async () =>{
             try {
-                const res = await axios.get("games/find/" + item , {
+                const res = await axios.get(`${apiUrl}/games/find/` + item , {
                     headers:{
                         'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken 
                       }

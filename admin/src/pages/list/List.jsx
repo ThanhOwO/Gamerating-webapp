@@ -2,6 +2,7 @@ import { Link, useLocation, useHistory } from "react-router-dom";
 import "./list.css";
 import { useState } from "react";
 import axios from "axios";
+import { apiUrl } from "../../context/Constants/constants";
 
 export default function List() {
     const location = useLocation()
@@ -19,7 +20,7 @@ export default function List() {
     const handleSubmit = async event => {
         event.preventDefault();
         try {        
-            await axios.put(`http://localhost:8800/api/lists/${list._id}`, lists, {
+            await axios.put(`${apiUrl}/lists/${list._id}`, lists, {
               headers:{
                 "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
               }

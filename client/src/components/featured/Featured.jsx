@@ -4,13 +4,14 @@ import InfoOutlined from "@material-ui/icons/InfoOutlined"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
+import { apiUrl } from "../../authContext/constant"
 
 export default function Featured({type, setgenre}) {
     const [content, setContent] = useState({})
     useEffect(() => {
         const getRandomContent = async () => {
             try {
-                const res = await axios.get(`/games/random?type=${type}`, {
+                const res = await axios.get(`${apiUrl}/games/random?type=${type}`, {
                     headers:{
                         'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
                       }})

@@ -22,18 +22,6 @@ export const createListFailure = () => ({
     type: "CREATE_LIST_FAILURE", 
 })
 
-// Update list -----------------------------------------
-export const updateListStart = () => ({
-    type: "EDIT_LIST_START",
-})
-export const updateListSuccess = (list) => ({
-    type: "EDIT_LIST_SUCCESS",
-    payload: list,
-})
-export const updateListFailure = () => ({
-    type: "EDIT_LIST_FAILURE", 
-})
-
 
 // Delete list -----------------------------------------
 export const deleteListStart = () => ({

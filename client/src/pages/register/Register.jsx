@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import AlertMessage from '../../components/layout/AlerMessage'
 import Button from 'react-bootstrap/Button'
 import axios from "axios"
+import { apiUrl } from "../../authContext/constant"
 
 export default function Register() {
 
@@ -32,7 +33,7 @@ export default function Register() {
             return
       } 
       try {
-        await axios.post(`auth/register`, registerForm) 
+        await axios.post(`${apiUrl}/auth/register`, registerForm) 
         navigate('/login')
       } catch (error) {
         setAlert({type: 'danger', message: 'Username or email already registered'})

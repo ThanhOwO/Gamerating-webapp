@@ -2,6 +2,7 @@ import { Link, useLocation, useHistory } from "react-router-dom";
 import "./product.css";
 import { useState } from "react";
 import axios from "axios";
+import { apiUrl } from "../../context/Constants/constants";
 
 export default function Product() {
 
@@ -20,7 +21,7 @@ export default function Product() {
     const handleSubmit = async event => {
         event.preventDefault();
         try {        
-            await axios.put(`http://localhost:8800/api/games/${lgame._id}`, game, {
+            await axios.put(`${apiUrl}/games/${lgame._id}`, game, {
               headers:{
                 "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
               }

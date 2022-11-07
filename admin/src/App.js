@@ -24,7 +24,7 @@ function App() {
     <Router>
       <Switch>
           <Route exact path="/login">
-            {user ? <Redirect to="/" /> :
+            {user ? <Redirect to="/home" /> :
               <Login/>
             }</Route>
 
@@ -33,7 +33,7 @@ function App() {
             <Topbar />
             <div className="container">
             <Sidebar />
-            <Route exact path="/">
+            <Route exact path="/home">
                 <Home />
               </Route>
               <Route path="/users">

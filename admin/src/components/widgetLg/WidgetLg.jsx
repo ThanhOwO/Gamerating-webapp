@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios"
 import { Create } from "@material-ui/icons";
+import { apiUrl } from "../../context/Constants/constants";
 
 export default function WidgetLg() {
 
@@ -10,7 +11,7 @@ export default function WidgetLg() {
   useEffect(()=> {
     const getNewGames = async () => {
       try {
-          const res = await axios.get("/games?new=true", {
+          const res = await axios.get(`${apiUrl}/games?new=true`, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }

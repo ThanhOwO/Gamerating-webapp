@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom";
 import { useState} from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { apiUrl } from "../../context/Constants/constants";
 
 export default function User() {
 
@@ -28,7 +29,7 @@ export default function User() {
     const handleSubmit = async event => {
       event.preventDefault();
       try {        
-          await axios.put(`http://localhost:8800/api/users/${luser._id}`, user, {
+          await axios.put(`${apiUrl}/users/${luser._id}`, user, {
             headers:{
               "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }

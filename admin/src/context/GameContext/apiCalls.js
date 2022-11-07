@@ -1,12 +1,12 @@
 import axios from "axios"
 import { getGameStart, getGameSuccess, getGameFailure, deleteGameStart, deleteGameSuccess, deleteGameFailure, createGameStart, createGameSuccess, createGameFailure } from "./GameAction"
-
+import { apiUrl } from "../Constants/constants"
 
 // Get game
 export const getGames = async (dispatch) => {
     dispatch(getGameStart())
     try {
-        const res = await axios.get("games/", {
+        const res = await axios.get(`${apiUrl}/games/`, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
