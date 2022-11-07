@@ -1,1 +1,1 @@
-export const apiUrl = process.env.NODE_ENV !== 'production' ? 'https://gscornerbe.herokuapp.com/api' : 'http://localhost:8800/api'
+export const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:8800/api' : 'https://gscornerbe.herokuapp.com/api'
