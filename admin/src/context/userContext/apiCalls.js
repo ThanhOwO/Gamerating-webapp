@@ -1,5 +1,5 @@
 import axios from "axios"
-import { getUserSuccess, getUserStart, getUserFailure, deleteUserStart, deleteUserSuccess, deleteUserFailure, createUserStart, createUserSuccess, createUserFailure, updateUserSuccess, updateUserFailure, updateUserStart } from "./UserAction"
+import { getUserSuccess, getUserStart, getUserFailure, deleteUserStart, deleteUserSuccess, deleteUserFailure, createUserStart, createUserSuccess, createUserFailure} from "./UserAction"
 
 
 // Get user
@@ -31,20 +31,6 @@ export const createUsers = async (user, dispatch) => {
     }
 }
 
-//Update user
-export const updateUsers = (_id) => {return async (user, dispatch) => {
-    dispatch(updateUserStart())
-    try {
-            await axios.put("users/${_id}", user, {
-            headers:{
-              'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
-            }})
-        dispatch(updateUserSuccess({_id, user}))
-    } catch (error) {
-        dispatch(updateUserFailure())
-    }
-    } 
-}
 
 //Delete user
 export const deleteUsers = async (id, dispatch) => {

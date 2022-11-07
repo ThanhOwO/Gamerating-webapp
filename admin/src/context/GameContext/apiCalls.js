@@ -1,5 +1,5 @@
 import axios from "axios"
-import { getGameStart, getGameSuccess, getGameFailure, deleteGameStart, deleteGameSuccess, deleteGameFailure, createGameStart, createGameSuccess, createGameFailure, updateGameStart, updateGameSuccess, updateGameFailure } from "./GameAction"
+import { getGameStart, getGameSuccess, getGameFailure, deleteGameStart, deleteGameSuccess, deleteGameFailure, createGameStart, createGameSuccess, createGameFailure } from "./GameAction"
 
 
 // Get game
@@ -31,19 +31,6 @@ export const createGames = async (game, dispatch) => {
     }
 }
 
-//Update game
-export const updateGames = (_id) => {return async (game, dispatch) => {
-    dispatch(updateGameStart())
-    try {
-            await axios.put("games/${_id}" , game , {
-            headers:{
-              'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
-            }})
-        dispatch(updateGameSuccess(game))
-    } catch (error) {
-        dispatch(updateGameFailure())
-    }}  
-}
 
 //Delete game
 export const deleteGames = async (id, dispatch) => {

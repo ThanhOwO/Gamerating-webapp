@@ -38,25 +38,6 @@ const GameReducer = (state, action) => {
                 error: true,
             };
 
-        case "EDIT_GAME_START":
-            return{
-                ...state,
-                isFetching: true,
-                error: false,
-            }
-        case "EDIT_GAME_SUCCESS":
-            return{
-                games: state.games.map((game) => game._id === action.payload._id && action.payload),
-                isFetching: false,
-                error: false,
-            }
-        case "EDIT_GAME_FAILURE":
-            return{
-                ...state,
-                isFetching: false,
-                error: true,
-            };
-
         case "DELETE_GAME_START":
             return{
                 ...state,

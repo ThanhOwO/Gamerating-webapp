@@ -1,8 +1,7 @@
 import { Link, useLocation, useHistory } from "react-router-dom";
 import "./product.css";
-import { useState, useContext } from "react";
-import {GameContext} from "../../context/GameContext/GameContext"
-import { updateGames } from "../../context/GameContext/apiCalls";
+import { useState } from "react";
+import axios from "axios";
 
 export default function Product() {
 
@@ -10,7 +9,6 @@ export default function Product() {
     const lgame = location.game;
 
     const [game, setGame] = useState(null)
-    const {dispatch} = useContext(GameContext)
     const history = useHistory()
 
 
@@ -19,11 +17,19 @@ export default function Product() {
         setGame({...game, [e.target.name]: value})
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        updateGames(game, dispatch)
-        history.push("/games")
-    }
+    const handleSubmit = async event => {
+        event.preventDefault();
+        try {        
+            await axios.put(`http://localhost:8800/api/games/${lgame._id}`, game, {
+              headers:{
+                "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
+              }
+             })
+            history.push("/games")
+        } catch (error) {
+          console.log(error.response)
+        }
+      }
 
     
   return (

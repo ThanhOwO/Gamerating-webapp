@@ -27,6 +27,7 @@ function App() {
             {user ? <Redirect to="/" /> :
               <Login/>
             }</Route>
+
           {user && 
           <>
             <Topbar />

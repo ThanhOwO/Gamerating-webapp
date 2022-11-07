@@ -22,18 +22,6 @@ export const createGameFailure = () => ({
     type: "CREATE_GAME_FAILURE", 
 })
 
-// Update game -----------------------------------------
-export const updateGameStart = () => ({
-    type: "EDIT_GAME_START",
-})
-export const updateGameSuccess = (game) => ({
-    type: "EDIT_GAME_SUCCESS",
-    payload: game,
-})
-export const updateGameFailure = () => ({
-    type: "EDIT_GAME_FAILURE", 
-})
-
 
 // Delete game -----------------------------------------
 export const deleteGameStart = () => ({

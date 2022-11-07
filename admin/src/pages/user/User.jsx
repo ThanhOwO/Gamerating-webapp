@@ -6,30 +6,37 @@ import {
 import { Link } from "react-router-dom";
 import "./user.css";
 import { useLocation } from "react-router-dom";
-import { updateUsers } from "../../context/userContext/apiCalls";
-import { useState, useContext } from "react";
+import { useState} from "react";
 import { useHistory } from "react-router-dom";
-import { UserContext } from "../../context/userContext/UserContext";
+import axios from "axios";
 
 export default function User() {
 
+
   const location = useLocation()
     const luser = location.user;
-
-    const [user, setUser] = useState(null)
-    const {dispatch} = useContext(UserContext)
     const history = useHistory()
 
+    const [user, setUser] = useState(null)
 
     const handleChange = (e) => {
-        const value = e.target.value;
-        setUser({...user, [e.target.name]: value})
-    }
+      const value = e.target.value;
+      setUser({...user, [e.target.name]: value})
+  }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        updateUsers(user, dispatch)
-        history.push("/users")
+
+    const handleSubmit = async event => {
+      event.preventDefault();
+      try {        
+          await axios.put(`http://localhost:8800/api/users/${luser._id}`, user, {
+            headers:{
+              "Authorization": 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
+            }
+           })
+          history.push("/users")
+      } catch (error) {
+        console.log(error.response)
+      }
     }
 
   return (
