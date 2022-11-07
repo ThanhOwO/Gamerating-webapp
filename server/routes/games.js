@@ -89,9 +89,10 @@ router.get("/random", verify, async(req, res) => {
 
 //Get all game ---------------------------------------------------------------------------------------------------------
 router.get("/", verify, async(req, res) => {
+    const query = req.query.new
     if(req.user.isAdmin){
         try {
-             const games = await Game.find()
+             const games = query ? await Game.find().sort({_id:-1}).limit(5) : await Game.find()
             res.status(200).json(games.reverse())
         } catch (error) {
             res.status(500).json(error)

@@ -17,11 +17,11 @@ export default function List({list}) {
         setIsMoved(true)
         let distance = listRef.current.getBoundingClientRect().x - 50
         if(direction === "left" && slideNumber > 0){
-            setSliderNumber(slideNumber - 1)
+            setSliderNumber(slideNumber -1)
             listRef.current.style.transform = `translateX(${230 + distance}px)`
         }
         if(direction === "right" && slideNumber < 10 - clicklimit){
-            setSliderNumber(slideNumber + 1)
+            setSliderNumber(slideNumber +1)
             listRef.current.style.transform = `translateX(${-230 + distance}px)`
         }
     }

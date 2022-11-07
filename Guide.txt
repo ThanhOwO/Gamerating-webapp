@@ -11,6 +11,19 @@ year: year of manufacture
 limit: age limit
 genre: game genre
 
+Add new function:
+- Client
+  + user setting page
+  + evaluate page for game
+  + like and dislike function
+- Admin
+  + Daily new CRUD page
+
+Fix function:
+- Admin:
+  + Update user
+  + Update game
+  + Update list
 
 
 list
@@ -22,21 +35,21 @@ content: array include all game card id
 
 list of game:
 Action: 
-1. Ghost of Tsushima
-2. Red Dead Redemption 2
-3. Elden Ring
-4. Sekiro                                     <-------------Continue
-5. Call of Duty: Modern Warfare II 
-6. Monster Hunter Rise
-7. DyingLight 2
-8. Ghostwire Tokyo
-9. Doom Eternal
-10. Lost Judgment
+1. Ghost of Tsushima (x)
+2. Red Dead Redemption 2 (x)
+3. Elden Ring (x)
+4. Sekiro (x)                                     
+5. Call of Duty: Modern Warfare II (x)
+6. Death Stranding (x)
+7. DyingLight 2 (x)
+8. Ghostwire Tokyo (x)
+9. Doom Eternal (x)
+10. Lost Judgment (x)
 
 Horror:
-1. Scorn
-2. RE 8
-3. Alien: Isolation
+1. Scorn (x)
+2. RE 8 (x)
+3. Alien: Isolation             <----------- 
 4. Outlast 2
 5. Dead space remake (upcoming)
 6. Little nightmare 2
@@ -46,28 +59,16 @@ Horror:
 10. THE CALLISTO PROTOCOL (upcoming)
 
 Adventure:
-1. God of War
+1. God of War (x)
 2. God of War Ragnarok (upcoming)
 3. Marvel’s Spider-Man Remastered
 4. Stray
 5. Horizon Forbidden West
-6. Spider-man remastered
+6. Day Gone
 7. Kena Bridge of Spirit
 8. Far cry 6
 9. Life is strange: true colors
 10. Cult of the Lamb
-
-Role-playing:
-1. Mount & blade 2: bannerlord
-2. Elden Ring
-3. The last of us 2
-4. Biomutant
-5. Dark Soul 3
-6. Final Fantasy 7 remake
-7. Nier: Automata
-8. The last of us remake
-9. Monster hunter rise
-10. Cyberpunk 2077
 
 Sport-game:
 1. WWE 2k22
@@ -93,16 +94,27 @@ Strategy:
 9. HighFleet
 10. Star craft 2
 
-
 Online:
 1. PUBG
 2. Apex Legends
-3. Overwatch 2
+3. Overwatch 2 (x)
 4. Valorant
 5. Fortnite
 6. CSGO
 7. LOL
 8. Call of Duty: Warzone
 9. Dota 2
-10. Minecraft
+10. Rainbow 6 Siege
+
+Role-playing:
+1. Mount & blade 2: bannerlord
+2. Elden Ring (x)
+3. The last of us 2
+4. Biomutant
+5. Dark Soul 3
+6. Final Fantasy 7 remake
+7. Nier: Automata
+8. The last of us remake
+9. Monster hunter rise
+10. Cyberpunk 2077
 

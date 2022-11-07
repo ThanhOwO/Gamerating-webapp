@@ -1,3 +1,5 @@
+import { Message } from "@material-ui/icons"
+
 export const loginStart = () => ({
     type: "LOGIN_START",
 })
@@ -6,7 +8,7 @@ export const loginSuccess = (user) => ({
     payload: user,
 })
 export const loginFailure = () => ({
-    type: "LOGIN_FAILURE", 
+    type: "LOGIN_FAILURE",
 })
 
 //Logout

@@ -27,7 +27,7 @@ router.put("/:id", verify, async(req, res) => {
             res.status(500).json(error)
         }
     }else{
-        res.status(403).json("You can update only your account!")
+        res.status(403).json({success: false, message: "You can update only your account!"})
     }
 }) 
   
@@ -42,7 +42,7 @@ router.delete("/:id", verify, async(req, res) => {
             res.status(500).json(error)
         }
     }else{
-        res.status(403).json("You can delete only your account!")
+        res.status(403).json({success: false, message: "You can delete only your account!"})
     }
 })
 
@@ -70,7 +70,7 @@ router.get("/", verify, async(req, res) => {
             res.status(500).json(error)
         }
     }else{
-        res.status(403).json("You are not allow to see all users!")
+        res.status(403).json({success: false, message: "You are not allow to see all users!"})
     }
 })
 

@@ -11,10 +11,10 @@ export default function Login() {
 
   const [alert, setAlert] = useState(null)
 
-  const toggleAlert = () => {
+/*   const toggleAlert = () => {
     setAlert({type: 'danger', message: 'Incorrect email or password!'})
     setTimeout(() => setAlert(null), 5000)
-  }
+  } */
   
   const {dispatch} = useContext(AuthContext)
 
@@ -30,8 +30,13 @@ const {email, password} = loginForm
 const onChangeLoginForm = event => setLoginForm({...loginForm, [event.target.name]: event.target.value})
 
 const loginUser = async event => {
+  try {
     event.preventDefault()   
-      login({email, password}, dispatch)
+    login({email, password}, dispatch)
+  } catch (error) {
+    setAlert({type: 'danger', message: 'Incorrect email or password!'})
+    setTimeout(() => setAlert(null), 5000)
+  }
 
 }
 
@@ -63,7 +68,7 @@ const loginUser = async event => {
                        value={password} 
                        onChange={onChangeLoginForm}
                        />
-                <Button className="loginButton" type="submit" onClick={toggleAlert}>Sign In</Button>
+                <Button className="loginButton" type="submit" >Sign In</Button>
                 <span>Are you new here ?
                 <Link className="link" to="/register">
                   <b>Sign up now.</b>

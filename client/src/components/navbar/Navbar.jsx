@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="right">
                 <Search className="icon"/>
                 <span> Welcome {user.username}</span>
-                <img src={user.profilePic} alt=""/>
+                <img src={user.profilePic || "https://cdn.glitch.global/11d25a0c-872c-47c4-aec2-5427424b9e3e/free-user-icon-3296-thumb-removebg-preview.png?v=1667798321017"} alt=""/>
                 <div className="profile">
                     <ArrowDropDown className="icon"/>
                     <div className="options">

@@ -4,7 +4,7 @@ import Featured from "../../components/featured/Featured"
 import List from "../../components/list/List"
 import { useEffect, useState } from "react"
 import axios from "axios"
-import Cards from "../DailyNew/Card/Cards"
+
 
 
 const Home = ({type}) => {

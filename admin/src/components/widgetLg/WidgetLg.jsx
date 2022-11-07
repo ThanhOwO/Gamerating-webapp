@@ -15,7 +15,7 @@ export default function WidgetLg() {
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }
         });
-        setNewGames(res.data)
+        setNewGames(res.data.reverse())
       } catch (error) {
         console.log(error)
       }
