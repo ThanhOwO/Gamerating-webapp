@@ -22,7 +22,7 @@ export const getLists = async (dispatch) => {
 export const createList = async (list, dispatch) => {
     dispatch(createListStart())
     try {
-            const res = await axios.post("lists/", list, {
+            const res = await axios.post(`${apiUrl}/lists/`, list, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
@@ -37,7 +37,7 @@ export const createList = async (list, dispatch) => {
 export const deleteList = async (id, dispatch) => {
     dispatch(deleteListStart())
     try {
-            await axios.delete("lists/" + id, {
+            await axios.delete(`${apiUrl}/lists/` + id, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})

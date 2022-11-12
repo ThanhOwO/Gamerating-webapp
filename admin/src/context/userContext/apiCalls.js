@@ -21,7 +21,7 @@ export const getUsers = async (dispatch) => {
 export const createUsers = async (user, dispatch) => {
     dispatch(createUserStart())
     try {
-            const res = await axios.post("auth/register", user, {
+            const res = await axios.post(`${apiUrl}/auth/register`, user, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
@@ -36,7 +36,7 @@ export const createUsers = async (user, dispatch) => {
 export const deleteUsers = async (id, dispatch) => {
     dispatch(deleteUserStart())
     try {
-            await axios.delete("users/" + id, {
+            await axios.delete(`${apiUrl}/users/` + id, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
