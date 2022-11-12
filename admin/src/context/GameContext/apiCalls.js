@@ -21,7 +21,7 @@ export const getGames = async (dispatch) => {
 export const createGames = async (game, dispatch) => {
     dispatch(createGameStart())
     try {
-            const res = await axios.post(`${apiUrl}games/`, game, {
+            const res = await axios.post(`${apiUrl}/games/`, game, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
@@ -36,7 +36,7 @@ export const createGames = async (game, dispatch) => {
 export const deleteGames = async (id, dispatch) => {
     dispatch(deleteGameStart())
     try {
-            await axios.delete(`${apiUrl}games/` + id, {
+            await axios.delete(`${apiUrl}/games/` + id, {
             headers:{
               'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem("user")).accessToken
             }})
