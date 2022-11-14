@@ -66,6 +66,10 @@ function App() {
             </div>
           </>
           }
+
+          <Route path="*">
+            <Redirect to={user ? "/home" : "/login"} />
+          </Route> 
       </Switch>
     </Router>
   );
