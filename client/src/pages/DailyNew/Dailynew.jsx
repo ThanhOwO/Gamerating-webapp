@@ -7,13 +7,13 @@ import Cards from './Card/Cards'
 
 export default function Dailynew() {
   return (
-    <div className='landing'>
-        <div className='dark-overlay'>
-            <Navbar/>
-            <Container className='BodyContainer'>
-                <Cards/>
-            </Container>
-        </div>
-    </div>
+      <div className='landing'>
+          <div className='dark-overlay'>
+              <Navbar/>
+              <Container className='BodyContainer'>
+                  <Cards/>
+              </Container>
+          </div>
+      </div>
   )
 }
