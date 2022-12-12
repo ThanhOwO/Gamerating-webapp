@@ -1,1 +1,1 @@
-export const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:8800/api' : 'https://gscornersv.et.r.appspot.com/api'
+export const apiUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:8800/api' : 'https://gscorner.vercel.app/api'
